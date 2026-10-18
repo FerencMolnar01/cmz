@@ -7,14 +7,14 @@ byte for byte.
 **Public beta, free to use until 31 December 2026.** Unpacking stays free without a time limit.
 
 - Website and measurements: https://ferencmolnar01.github.io/cmz/
-- Download: [Releases](https://github.com/FerencMolnar01/cmz/releases/latest)
+- Download: [cmz-1.0-beta.exe](https://github.com/FerencMolnar01/cmz/releases/download/v1.0-beta/cmz-1.0-beta.exe) · [all releases](https://github.com/FerencMolnar01/cmz/releases)
 - Feedback: fmolnar.no1@gmail.com
 
 This repository holds the website and the released program. The source code is not public.
 
 ## Getting started
 
-1. Download `cmz-1.0-beta.exe` from the latest release. During the beta the program is not code-signed, so
+1. Download `cmz-1.0-beta.exe` from the [releases](https://github.com/FerencMolnar01/cmz/releases). During the beta the program is not code-signed, so
    Windows SmartScreen may warn about it: choose “More info”, then “Run anyway”.
 2. On first start cmz offers to install itself for your user account (no administrator rights needed). It adds
    a Start menu entry, a “Compress with cmz” item to the Explorer right-click menu, and opens `.cmz` files on
