@@ -10,6 +10,9 @@ byte for byte.
 - Download: [cmz-1.0-beta2.exe](https://github.com/FerencMolnar01/cmz/releases/download/v1.0-beta2/cmz-1.0-beta2.exe) · [all releases](https://github.com/FerencMolnar01/cmz/releases)
 - Feedback: fmolnar.no1@gmail.com
 
+cmz is a joint work: Ferenc Molnár built it together with Claude, an AI model made by Anthropic. Ferenc set the
+goals and decided what stays and what goes; Claude wrote much of the code and ran the measurements.
+
 This repository holds the website and the released program. The source code is not public.
 
 ## Getting started
