@@ -38,4 +38,38 @@ Requirements: 64-bit Windows 10 or 11.
   that the unpacked result is what you need. To the extent permitted by law, the author is not liable for any
   damage or data loss arising from its use.
 
+## Third-party notices
+
+cmz contains code derived from CFITSIO (the Rice compression routines in `ricecomp.c`, originally written by
+Richard White, STScI), which cmz uses to rebuild Rice-compressed FITS data byte for byte. The CFITSIO licence
+requires the following notice:
+
+```
+Copyright (Unpublished--all rights reserved under the copyright laws of
+the United States), U.S. Government as represented by the Administrator
+of the National Aeronautics and Space Administration.  No copyright is
+claimed in the United States under Title 17, U.S. Code.
+
+Permission to freely use, copy, modify, and distribute this software
+and its documentation without fee is hereby granted, provided that this
+copyright notice and disclaimer of warranty appears in all copies.
+
+DISCLAIMER:
+
+THE SOFTWARE IS PROVIDED 'AS IS' WITHOUT ANY WARRANTY OF ANY KIND,
+EITHER EXPRESSED, IMPLIED, OR STATUTORY, INCLUDING, BUT NOT LIMITED TO,
+ANY WARRANTY THAT THE SOFTWARE WILL CONFORM TO SPECIFICATIONS, ANY
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE, AND FREEDOM FROM INFRINGEMENT, AND ANY WARRANTY THAT THE
+DOCUMENTATION WILL CONFORM TO THE SOFTWARE, OR ANY WARRANTY THAT THE
+SOFTWARE WILL BE ERROR FREE.  IN NO EVENT SHALL NASA BE LIABLE FOR ANY
+DAMAGES, INCLUDING, BUT NOT LIMITED TO, DIRECT, INDIRECT, SPECIAL OR
+CONSEQUENTIAL DAMAGES, ARISING OUT OF, RESULTING FROM, OR IN ANY WAY
+CONNECTED WITH THIS SOFTWARE, WHETHER OR NOT BASED UPON WARRANTY,
+CONTRACT, TORT , OR OTHERWISE, WHETHER OR NOT INJURY WAS SUSTAINED BY
+PERSONS OR PROPERTY OR OTHERWISE, AND WHETHER OR NOT LOSS WAS SUSTAINED
+FROM, OR AROSE OUT OF THE RESULTS OF, OR USE OF, THE SOFTWARE OR
+SERVICES PROVIDED HEREUNDER.
+```
+
 © 2026 Ferenc Molnár · Made in Hungary
