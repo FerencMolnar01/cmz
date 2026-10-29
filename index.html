@@ -210,7 +210,7 @@ footer .mono{font-family:var(--f-mono);font-size:.78rem}
       smaller</strong>, often cuts Office files to less than half, and packs <strong>astronomy FITS data
       17% tighter than 7-Zip</strong>. Every file comes back byte for byte.</p>
     <div class="ctas">
-      <a class="btn primary" href="https://github.com/FerencMolnar01/cmz/releases/download/v1.0-beta4/cmz-1.0-beta4.exe">Download the beta · 5.7 MB</a>
+      <a class="btn primary" href="https://github.com/FerencMolnar01/cmz/releases/download/v1.0-beta5/cmz-1.0-beta5.exe">Download the beta · 5.8 MB</a>
       <a class="btn" href="#results">See the measurements</a>
     </div>
     <div class="facts"><span>One 5.7 MB program</span><span>No admin rights needed</span><span>Unpacking is free forever</span></div>
@@ -283,7 +283,8 @@ footer .mono{font-family:var(--f-mono);font-size:.78rem}
   </div>
   <p class="note">Most of these files are private, so nobody else can repeat this test exactly. To check cmz on your own
     machine, use our <a href="test-files.html">27 public test files</a>: each one comes from its publisher, with a checksum,
-    a download script and the cmz result.</p>
+    a download script and the cmz result. On the same page, <a href="test-files.html#compare">size against time</a>
+    for cmz, 7-Zip, xz, zpaq and the paq family.</p>
 </section>
 
 <section id="promises" aria-label="Safety">
@@ -371,8 +372,9 @@ footer .mono{font-family:var(--f-mono);font-size:.78rem}
       has to repeat the same predictions, so it is not much faster than packing.</li>
     <li><b>Undo, then pack</b>JPEG photos, MP3s and the deflate streams inside zip, PDF and Office files are first
       decoded exactly. cmz packs what they contain, and on unpacking rebuilds the original file bit for bit.</li>
-    <li><b>Knows FITS</b>cmz reads the FITS header to learn how an image is laid out. Raw camera frames go
-      through a separate, fast image coder, which is why they pack in seconds.</li>
+    <li><b>Knows the layout</b>cmz reads FITS, BMP, TIFF and DICOM headers to learn how an image is laid out,
+      and WAV headers for sound. Raw camera frames and medical images go through a separate, fast image coder,
+      and audio through its own predictor, which is why they pack in seconds.</li>
   </ul>
 </section>
 
@@ -422,8 +424,8 @@ footer .mono{font-family:var(--f-mono);font-size:.78rem}
     <details><summary>Windows says “Windows protected your PC”. Is that normal?</summary>
       <p>During the beta the program is not code-signed yet, so SmartScreen warns about a new publisher. Choose
         “More info”, then “Run anyway”. To check that your copy is the original, compare its SHA-256 checksum
-        (PowerShell: <span class="menu">Get-FileHash cmz-1.0-beta4.exe</span>) with this one:</p>
-      <p class="hash">dc6576caccee492476a31a6451289904c8718cfbe6b60c1809d035eae4b342aa</p></details>
+        (PowerShell: <span class="menu">Get-FileHash cmz-1.0-beta5.exe</span>) with this one:</p>
+      <p class="hash">b3f04c642a53d743b2d0b3caa635ed5c057e72a5f29fc124a9f0f839f4565f62</p></details>
     <details><summary>Can I pack a whole folder into one file?</summary>
       <p>Not in this version. A folder is packed file by file, and each file gets its own .cmz.</p></details>
     <details><summary>Which Windows versions are supported?</summary>
@@ -447,7 +449,7 @@ footer .mono{font-family:var(--f-mono);font-size:.78rem}
 </section>
 
 <footer>
-  <span>cmz 1.0 beta 4 · made in Hungary by Ferenc Molnár, together with Claude</span>
+  <span>cmz 1.0 beta 5 · made in Hungary by Ferenc Molnár, together with Claude</span>
   <span class="mono">fmolnar.no1@gmail.com</span>
 </footer>
 </div>
