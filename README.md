@@ -40,6 +40,13 @@ Requirements: 64-bit Windows 10 or 11.
 
 ## Third-party notices
 
+cmz builds on published work by many people. The full list is in the Credits section of the
+[website](https://ferencmolnar01.github.io/cmz/#credits). Two items need a notice here:
+
+- To rebuild progressive JPEG files exactly, cmz reproduces the libjpeg encoder. This software is based in part
+  on the work of the Independent JPEG Group.
+- The MP3 Huffman tables are taken from minimp3 by lieff, released into the public domain (CC0).
+
 cmz contains code derived from CFITSIO (the Rice compression routines in `ricecomp.c`, originally written by
 Richard White, STScI), which cmz uses to rebuild Rice-compressed FITS data byte for byte. The CFITSIO licence
 requires the following notice:

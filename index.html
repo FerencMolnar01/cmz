@@ -163,6 +163,9 @@ details p + p{margin-top:-6px}
 .inside b{display:block;color:var(--text);font-family:var(--f-display);font-weight:600;font-size:1.1rem;margin-bottom:8px}
 .about{display:grid;gap:14px;max-width:68ch}
 .about p{color:var(--muted)}
+.credits{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px 28px;list-style:none;padding:0;margin:0}
+.credits li{border-top:1px solid var(--line-soft);padding-top:12px;color:var(--muted);font-size:.92rem;min-width:0}
+.credits b{display:block;color:var(--text);font-family:var(--f-display);font-weight:600;font-size:1rem;margin-bottom:6px}
 footer{margin-top:clamp(56px,7vw,90px);padding-top:24px;border-top:1px solid var(--line-soft);display:flex;
   justify-content:space-between;gap:12px 24px;flex-wrap:wrap;font-size:.86rem;color:var(--muted)}
 footer .mono{font-family:var(--f-mono);font-size:.78rem}
@@ -170,7 +173,7 @@ footer .mono{font-family:var(--f-mono);font-size:.78rem}
 @media (max-width:980px){.chip{display:none}}
 @media (max-width:880px){
   .hero{grid-template-columns:minmax(0,1fr)}
-  .trio,.steps,.split{grid-template-columns:minmax(0,1fr)}
+  .trio,.steps,.split,.credits{grid-template-columns:minmax(0,1fr)}
 }
 @media (max-width:560px){
   body{font-size:16px}
@@ -446,6 +449,42 @@ footer .mono{font-family:var(--f-mono);font-size:.78rem}
       before it, and every test file had to come back byte for byte.</p>
     <p>Questions, results and bug reports are welcome at <a href="mailto:fmolnar.no1@gmail.com">fmolnar.no1@gmail.com</a>.</p>
   </div>
+</section>
+
+<section id="credits">
+  <div class="head">
+    <p class="eyebrow">Credits</p>
+    <h2>Whose work cmz builds on</h2>
+    <p>cmz is our own code, but it is not built from nothing. These are the people and projects whose published
+      work it stands on. Where code or tables were taken over, it says so.</p>
+  </div>
+  <ul class="credits">
+    <li><b>Context mixing</b>The engine is our own design and code. Its building blocks are the methods Matt Mahoney
+      published with PAQ and zpaq (mixing predictions, bit histories, adaptive probability maps) and the work of the
+      many people who extended them.</li>
+    <li><b>JPEG</b>Predicting a block's edge coefficients from its neighbours comes from Gopal Lakhani's work, also
+      used in Lepton by Dropbox, and several contexts from the paq8px JPEG model. To rebuild progressive files
+      exactly, cmz reproduces the libjpeg encoder. This software is based in part on the work of the Independent
+      JPEG Group.</li>
+    <li><b>Deflate</b>Rebuilding the deflate streams inside zip, PNG, PDF and Office files follows the path opened by
+      precomp (Christian Schneider) and preflate (Dirk Steinke). cmz reproduces the choices of zlib by Jean-loup
+      Gailly and Mark Adler bit for bit.</li>
+    <li><b>MP3</b>The MP3 Huffman tables are taken from minimp3 by lieff, released into the public domain (CC0).</li>
+    <li><b>Audio</b>The sound predictor is a backward-adaptive least-squares (OLS) predictor, the approach published
+      by Grzegorz Ulacha and carried furthest in sac by Sebastian.</li>
+    <li><b>Images</b>The fast image coder blends classic predictors, among them MED from LOCO-I / JPEG-LS by Marcelo
+      Weinberger, Gadiel Seroussi and Guillermo Sapiro.</li>
+    <li><b>FITS</b>The Rice routines are a translation of <span class="menu">ricecomp.c</span> from CFITSIO, written by
+      Richard White at STScI. Tile compression follows the FITS conventions and CFITSIO (HEASARC, NASA GSFC). The
+      CFITSIO licence notice is in the <a href="https://github.com/FerencMolnar01/cmz#third-party-notices">README</a>.</li>
+    <li><b>Program code</b>The filter for x86 executables is the classic call-address transform, best known as the
+      BCJ filter in Igor Pavlov's 7-Zip.</li>
+    <li><b>The community</b>Most of what is known about compression was worked out in public, on encode.su and
+      before it, by the people who build the tools we measure against. Claude, the AI model that helped write cmz,
+      learned from that public work too.</li>
+  </ul>
+  <p class="note">If you recognise your work in cmz and it is missing here, please write to
+    <a href="mailto:fmolnar.no1@gmail.com">fmolnar.no1@gmail.com</a> and we will add it.</p>
 </section>
 
 <footer>
