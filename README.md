@@ -27,7 +27,7 @@ This repository holds the website and the released program. The source code is n
 To check your download, compare its SHA-256 checksum (PowerShell: `Get-FileHash cmz-1.0-beta6.exe`) with the one
 given in the release notes.
 
-Requirements: 64-bit Windows. Tested on Windows 10 and 11; Windows 7 SP1 and 8.1 should work but are untested.
+Requirements: 64-bit Windows. Tested on Windows 11; Windows 10, 8.1 and 7 SP1 should work but are untested.
 
 ## Beta terms
 
